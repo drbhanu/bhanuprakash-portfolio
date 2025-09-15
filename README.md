@@ -1,6 +1,6 @@
 # bhanuprakash-portfolio
 
-## 👋 Hi, I'm Bhanu Prakash Doppala, Ph.D.
+## 👋 Hi, I'm Bhanu Prakash Doppala
 
 🎓 Ph.D. in Information Technology | 📊 Data Science Enthusiast | 📷 Wildlife & Nature Photographer | 🏏 Cricket Lover | 🧘 Exploring Wellness at 40  
 
