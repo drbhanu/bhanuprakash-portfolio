@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Dr. Bhanu Prakash Doppala — Data Scientist & Educator</title>
+<meta name="description" content="Dr. Bhanu Prakash Doppala — Lead Instructor in Data Analytics. Researcher in ML & Healthcare AI. Curriculum developer and educator." />
+<style>
+  :root{
+    --bg:#0f1724; --card:#0b1220; --muted:#9aa7b2; --accent:#2dd4bf; --accent-2:#60a5fa;
+    --glass: rgba(255,255,255,0.03);
+    --radius:14px;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    color-scheme: dark;
+  }
+  :root.light{
+    --bg: #f7fafc; --card:#ffffff; --muted:#475569; --accent:#0ea5a4; --accent-2:#2563eb; --glass: rgba(0,0,0,0.03);
+    color-scheme: light;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;
+    background: linear-gradient(180deg,var(--bg) 0%, #031025 100%);
+    color:var(--muted);
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    line-height:1.5;
+    padding:28px;
+  }
+  .container{max-width:1100px;margin:0 auto;}
+  header{display:flex;gap:18px;align-items:center;margin-bottom:22px}
+  .avatar{
+    width:110px;height:110px;border-radius:16px;background:linear-gradient(135deg,var(--accent),var(--accent-2));
+    display:flex;align-items:center;justify-content:center;font-weight:700;font-size:28px;color:#04212a;box-shadow:0 6px 30px rgba(2,6,23,0.6);
+  }
+  .name-title{flex:1}
+  .name{font-size:22px;font-weight:700;margin:0;color:var(--muted)}
+  .title{font-size:13px;color:var(--muted);margin:6px 0 0}
+  .ctas{display:flex;gap:10px}
+  .btn{
+    background:var(--accent);color:#04212a;padding:10px 14px;border-radius:12px;font-weight:600;border:0;
+    box-shadow: 0 6px 18px rgba(45,212,191,0.08);cursor:pointer;
+  }
+  .btn-outline{background:transparent;border:1px solid rgba(0,0,0,0.06);color:var(--muted);padding:10px 12px;border-radius:12px}
+  main{display:grid;grid-template-columns: 1fr 360px;gap:20px}
+  @media (max-width:980px){main{grid-template-columns:1fr;}.avatar{width:86px;height:86px}}
+  .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:18px;border-radius:var(--radius);box-shadow:0 10px 30px rgba(2,6,23,0.6)}
+  .about{display:flex;gap:18px;align-items:flex-start}
+  .profile-text{font-size:15px;color:var(--muted)}
+  .muted{color:var(--muted);font-size:13px}
+  .section{margin-top:18px}
+  h3{margin:6px 0 12px;font-size:16px;color:var(--muted)}
+  .skills{display:flex;flex-wrap:wrap;gap:10px}
+  .skill-pill{background:var(--glass);padding:8px 10px;border-radius:999px;font-weight:600;font-size:13px;color:var(--muted)}
+  .skill-list{display:flex;flex-direction:column;gap:10px}
+  .skill-row{display:flex;justify-content:space-between;align-items:center;gap:12px}
+  .bar{background:rgba(0,0,0,0.06);height:10px;border-radius:999px;flex:1;overflow:hidden;margin-left:12px}
+  .bar > i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--accent),var(--accent-2))}
+  .timeline{display:flex;flex-direction:column;gap:12px}
+  .entry{padding:12px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));border:1px solid rgba(0,0,0,0.02)}
+  .entry .role{font-weight:700;color:var(--muted)}
+  .entry .meta{color:var(--muted);font-size:13px;margin-top:6px}
+  .pub-list{display:grid;gap:8px}
+  .pub-item{padding:10px;border-radius:10px;background:rgba(255,255,255,0.01);font-size:14px}
+  .pub-item small{display:block;color:var(--muted);margin-top:6px;font-size:13px}
+  .collapse{cursor:pointer;display:inline-flex;align-items:center;gap:8px;color:var(--accent)}
+  aside{display:flex;flex-direction:column;gap:14px}
+  .contact-card .row{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+  .contact-card a{color:var(--muted);text-decoration:none;font-weight:600}
+  .mini-list{display:flex;flex-direction:column;gap:8px}
+  .chip{background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:9px;border-radius:10px;font-weight:600;color:var(--muted)}
+  .download{display:block;text-align:center;padding:10px;border-radius:10px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#04212a;font-weight:700;text-decoration:none}
+  footer{margin-top:26px;text-align:center;color:var(--muted);font-size:13px}
+  form{display:flex;flex-direction:column;gap:10px}
+  input,textarea{background:transparent;border:1px solid rgba(0,0,0,0.06);padding:10px;border-radius:8px;color:var(--muted)}
+  input::placeholder,textarea::placeholder{color:var(--muted)}
+  .tags{display:flex;gap:8px;flex-wrap:wrap}
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media (max-width:520px){.two-col{grid-template-columns:1fr}}
+  .notice{padding:10px;border-radius:10px;background:linear-gradient(90deg, rgba(96,165,250,0.06), rgba(45,212,191,0.04));color:var(--muted);font-size:13px}
+  .pub-toggle{display:flex;gap:8px;flex-wrap:wrap}
+  .tag-btn{background:transparent;border:1px solid rgba(0,0,0,0.03);padding:6px 8px;border-radius:8px;font-size:13px;color:var(--muted);cursor:pointer}
+  .top-right-controls{display:flex;gap:10px;align-items:center}
+  .theme-toggle{background:transparent;border:1px solid rgba(0,0,0,0.06);padding:6px 8px;border-radius:8px;cursor:pointer;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="avatar">BD</div>
+    <div class="name-title">
+      <p class="name">Dr. Bhanu Prakash Doppala, Ph.D.</p>
+      <p class="title">Lead Instructor — Data Analytics · Researcher in Machine Learning & Healthcare AI</p>
+    </div>
+    <div class="ctas top-right-controls">
+      <button class="theme-toggle" id="themeBtn">Toggle Theme</button>
+      <a class="btn" href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Hire / Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="card about">
+        <div style="flex:1">
+          <h3>About — Professional Summary</h3>
+          <p class="profile-text">
+            I am a data scientist and educator with 16+ years of experience designing practical curricula and delivering
+            outcomes-focused training. I build lightweight, production-ready ML solutions for healthcare and teach professionals
+            to turn data into impact. My strengths lie in translating research into usable tools and mentoring learners to publish
+            and deploy real projects.
+          </p>
+
+          <div class="section">
+            <h3>Key Strengths</h3>
+            <div class="skills" id="skills"></div>
+          </div>
+
+          <div class="section">
+            <h3>Technical Proficiency</h3>
+            <div class="skill-list" aria-hidden="false">
+              <div class="skill-row"><strong>Data Exploration & Visualization</strong><div class="bar"><i style="width:92%"></i></div></div>
+              <div class="skill-row"><strong>Machine Learning & Deep Learning</strong><div class="bar"><i style="width:88%"></i></div></div>
+              <div class="skill-row"><strong>SQL & Data Engineering</strong><div class="bar"><i style="width:82%"></i></div></div>
+              <div class="skill-row"><strong>Power BI & Dashboards</strong><div class="bar"><i style="width:84%"></i></div></div>
+              <div class="skill-row"><strong>Python, MATLAB, SPSS</strong><div class="bar"><i style="width:86%"></i></div></div>
+              <div class="skill-row"><strong>Git & Collaboration</strong><div class="bar"><i style="width:80%"></i></div></div>
+            </div>
+          </div>
+
+          <div class="section">
+            <h3>Education</h3>
+            <div class="timeline">
+              <div class="entry">
+                <div class="role">Ph.D. — Information Technology</div>
+                <div class="meta">Lincoln University College, Kuala Lumpur — 2018–2022</div>
+              </div>
+              <div class="entry">
+                <div class="role">M.Tech — Computer Science & Engineering</div>
+                <div class="meta">Acharya Nagarjuna University — 2008–2010</div>
+              </div>
+              <div class="entry">
+                <div class="role">B.Tech — Computer Science & Engineering</div>
+                <div class="meta">D.M.S.V.H. College of Engineering — 2004–2007</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <h3>Work Experience</h3>
+            <div class="timeline">
+              <div class="entry">
+                <div class="role">Lead Instructor — Data Analytics</div>
+                <div class="meta">Generation Australia, Sydney — 03/2023 – 07/2025</div>
+                <div style="margin-top:8px;color:var(--muted)">Led full-time Data Analytics programs, designed hands-on modules in Python, Power BI, SQL and coached students through industry capstones.</div>
+              </div>
+              <div class="entry">
+                <div class="role">Assistant Professor — Computer Science</div>
+                <div class="meta">Vignan's Institute of Information Technology — 2016 – 2022</div>
+              </div>
+              <div class="entry">
+                <div class="role">Software Engineer</div>
+                <div class="meta">Semanticspace Technologies — 2007 – 2009</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <h3>Selected Research & Publications</h3>
+            <div class="notice">Brief curated list. See full CV for complete details (Download PDF).</div>
+            <div style="margin-top:10px" class="pub-toggle">
+              <button class="tag-btn" onclick="filterPubs('all')">All</button>
+              <button class="tag-btn" onclick="filterPubs('health')">Healthcare AI</button>
+              <button class="tag-btn" onclick="filterPubs('ml')">Machine Learning</button>
+              <button class="tag-btn" onclick="filterPubs('nlp')">NLP</button>
+            </div>
+
+            <div id="pubs" style="margin-top:10px" class="pub-list"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <div style="height:18px"></div>
+
+    </section>
+
+    <aside>
+      <div class="card contact-card">
+        <h3>Contact</h3>
+        <div class="row"><strong>Email:</strong><a href="mailto:bhanu.doppala@gmail.com"> bhanu.doppala@gmail.com</a></div>
+        <div class="row"><strong>Phone:</strong><a href="tel:+61483182843"> +61 483 182 843</a></div>
+        <div class="row"><strong>Location:</strong><span class="muted"> Brisbane, Australia</span></div>
+        <div class="row"><strong>LinkedIn:</strong><a href="https://www.linkedin.com/in/bhanuprakashdoppala/" target="_blank">bhanuprakashdoppala</a></div>
+        <div style="margin-top:12px" class="mini-list">
+          <div class="chip">Member: IEEE · IAENG · IFERP</div>
+          <div class="chip">Languages: English · Hindi · Telugu</div>
+        </div>
+
+        <div style="margin-top:12px">
+          <a class="download" href="BHANUPRAKASH-CV-2025.docx" download>Download Full CV (DOCX)</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Certificates</h3>
+        <div class="mini-list">
+          <div class="chip">CCNA: Introduction to Networks</div>
+          <div class="chip">CCNA: Switching, Routing & Wireless Essentials</div>
+          <div class="chip">CCNA: Enterprise Networking, Security & Automation</div>
+          <div class="chip">Cisco Certified Educator</div>
+          <div class="chip">Power BI Essential Training</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 id="contact">Contact form</h3>
+        <form id="contactForm" onsubmit="sendForm(event)">
+          <input type="text" id="name" required placeholder="Your name"/>
+          <input type="email" id="email" required placeholder="Your email"/>
+          <input type="text" id="subject" placeholder="Subject"/>
+          <textarea id="message" rows="5" placeholder="Short message (brief pitch or inquiry)"></textarea>
+          <button class="btn" type="submit">Send Message</button>
+          <div id="formStatus" style="margin-top:8px;color:var(--muted)"></div>
+        </form>
+        <div style="margin-top:10px;font-size:13px;color:var(--muted)">
+          <strong>To enable real submissions:</strong> Replace the sendForm() implementation with Formspree or Netlify Forms.
+          <details style="margin-top:6px;color:var(--muted)">
+            <summary>Formspree quick setup</summary>
+            <ol>
+              <li>Create a free Formspree account and get your form endpoint (e.g., <code>https://formspree.io/f/{your-id}</code>).</li>
+              <li>Replace sendForm() function's fetch URL with that endpoint and POST JSON or form-data.</li>
+              <li>Optionally show success/failure to users.</li>
+            </ol>
+          </details>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Volunteer & Achievements</h3>
+        <div class="mini-list">
+          <div class="chip"><strong>CCNA Educator</strong> — Trained 300+ students</div>
+          <div class="chip"><strong>Prathibha Award</strong> — Academic excellence</div>
+          <div class="chip">State-level badminton · Cricket high-scorer</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Quick Links</h3>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <a class="btn-outline" href="https://scholar.google.com.au/citations?user=p_4_N4oAAAAJ&hl=en" target="_blank">Google Scholar</a>
+          <a class="btn-outline" href="https://www.scopus.com/authid/detail.uri?authorId=57218908466" target="_blank">Scopus Profile</a>
+        </div>
+      </div>
+
+    </aside>
+  </main>
+
+  <footer>
+    Built with ❤️ · Dr. Bhanu Prakash Doppala — Data Analytics · <span class="muted">Add the PDF version of your CV to the repo root and update the download link if desired.</span>
+  </footer>
+</div>
+
+<script>
+const skills = [
+  "Python Programming", "Power BI", "SQL", "Machine Learning", "Deep Learning", "Big Data (Spark)",
+  "MATLAB", "SPSS", "Data Visualization", "Curriculum Development", "GIT", "CCNA Networking"
+];
+const skillContainer = document.getElementById('skills');
+skills.forEach(s => {
+  const el = document.createElement('div');
+  el.className = 'skill-pill';
+  el.textContent = s;
+  skillContainer.appendChild(el);
+});
+
+const publications = [
+  { tag:'health', title:'Early-stage detection of Cardiomegaly: An extensive review', source:'International Journal of Advanced Science and Technology, 2019', summary:'A review of image-based cardiomegaly detection and dataset considerations.' },
+  { tag:'health', title:'Premature Detection of Cardiomegaly using Hybrid Machine Learning Technique', source:'Journal of Advanced Research in Dynamical & Control Systems, 2020', summary:'Hybrid ML pipeline combining feature engineering and ensemble classifiers for chest imagery.' },
+  { tag:'health', title:'A Reliable Machine Intelligence Model for Accurate Identification of Cardiovascular Diseases', source:'Journal of Healthcare Engineering, 2022', summary:'Ensemble methods to improve diagnostic accuracy on heart disease datasets.'},
+  { tag:'ml', title:'Prediction and Forecasting of Persistent Kidney Problems Using Machine Learning', source:'IJCRR, 2020', summary:'Time-series and classification models for renal risk prediction.'},
+  { tag:'ml', title:'Tiny 2D-CNN Ensemble to Detect Cardiomegaly', source:'Journal of Personalized Medicine, 2023', summary:'Resource-efficient CNN ensemble suitable for constrained deployments.'},
+  { tag:'nlp', title:'Lexical Reordering for English-Telugu MT', source:'Revue d’Intelligence Artificielle, 2023', summary:'Reordering heuristics for low-resource language translation.'}
+];
+
+const pubsEl = document.getElementById('pubs');
+function showPubs(list){
+  pubsEl.innerHTML = '';
+  list.forEach((p,idx) => {
+    const div = document.createElement('div');
+    div.className = 'pub-item';
+    div.innerHTML = `<strong>${p.title}</strong><small>${p.source}</small><div style="margin-top:8px;color:var(--muted)">${p.summary}</div>`;
+    pubsEl.appendChild(div);
+  });
+}
+showPubs(publications);
+function filterPubs(tag){
+  if(tag === 'all') return showPubs(publications);
+  showPubs(publications.filter(p => p.tag === tag));
+}
+
+/* Theme toggle */
+const themeBtn = document.getElementById('themeBtn');
+const root = document.documentElement;
+const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+if(localStorage.getItem('theme') === 'light' || (!localStorage.getItem('theme') && prefersLight)) {
+  root.classList.add('light');
+}
+themeBtn.addEventListener('click', () => {
+  const isLight = root.classList.toggle('light');
+  localStorage.setItem('theme', isLight ? 'light' : 'dark');
+});
+
+/* Contact form — demo. Replace with real endpoint for submissions. */
+function sendForm(e){
+  e.preventDefault();
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const subject = document.getElementById('subject').value.trim();
+  const message = document.getElementById('message').value.trim();
+  const status = document.getElementById('formStatus');
+
+  if(!name || !email) {
+    status.textContent = 'Please provide name and email.';
+    return;
+  }
+
+  status.textContent = 'Preparing message...';
+
+  setTimeout(() => {
+    status.innerHTML = 'Message prepared. This demo form does not send email directly. Use Formspree or Netlify Forms to enable submissions.<br><pre style="white-space:pre-wrap;background:rgba(0,0,0,0.03);padding:8px;border-radius:8px;margin-top:8px">To: bhanu.doppala@gmail.com\nSubject: ' + (subject || 'Inquiry from portfolio') + '\n\nHello Dr. Bhanu,\n\n' + (message || '[Your message here]') + '\n\nBest,\n' + name + '\n' + email + '</pre>';
+  },800);
+}
+</script>
+</body>
+</html>
