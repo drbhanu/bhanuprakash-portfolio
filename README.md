@@ -1,58 +1,45 @@
-# bhanuprakash-portfolio
+# Bhanu Prakash — Portfolio
 
-## 👋 Hi, I'm Bhanu Prakash Doppala
+This repository contains a single-file portfolio (`index.html`) and the uploaded CV file.
 
-🎓 Ph.D. in Information Technology | 📊 Data Science Enthusiast | 📷 Wildlife & Nature Photographer | 🏏 Cricket Lover | 🧘 Exploring Wellness at 40  
+## What's included
+- `index.html` — Responsive single-page portfolio built with HTML, CSS and JavaScript. Includes:
+  - Theme toggle (light/dark)
+  - Curated skills & publications
+  - Contact form skeleton (instructions for Formspree/Netlify)
+  - Download link to your uploaded CV (DOCX)
 
----
+- `BHANUPRAKASH-CV-2025.docx` — The original CV file you uploaded.
 
-## 🌟 About Me
-I'm a researcher, educator, and creator with **16+ years of university teaching experience** in Information Technology.  
-After moving to **Brisbane, Australia**, I’m combining my passion for **data analytics, photography, and mindful living** to share insights and inspire others.  
+## Deploy to GitHub Pages
+1. Create a new GitHub repository (e.g., `bhanu-portfolio`).
+2. Upload `index.html` and `BHANUPRAKASH-CV-2025.docx` to the repository root.
+3. In GitHub, go to **Settings → Pages** (or **Pages** in the repo sidebar).
+4. Select the branch (e.g., `main`) and folder `/ (root)`, then save.
+5. Your site will be available at `https://<your-username>.github.io/<repo-name>/`.
 
-🔹 I love translating **complex data into clear insights**.  
-🔹 I capture the beauty of **wildlife and nature through my lens**.  
-🔹 I enjoy **cricket discussions, yoga, and fitness** as part of a balanced lifestyle.  
+## Enable contact form submissions (optional)
+### Using Formspree:
+1. Create an account at https://formspree.io and create a form to get your endpoint.
+2. Replace the `sendForm()` function in `index.html` with a `fetch()` POST to your Formspree endpoint.
+3. Example (replace `YOUR_FORMSPREE_URL`):
 
----
+```js
+fetch("https://formspree.io/f/YOUR_FORMSPREE_ID", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ name, email, subject, message })
+})
+.then(res => { /* handle success */ })
+```
 
-## 💼 What I Do
-- **Data & Analytics** – Exploring AI, machine learning, and data visualization.  
-- **Photography** – Documenting wildlife, landscapes, and creative portraits.  
-- **Content Creation** – Sharing thoughts on cricket, tech, and life in your 40s.  
-- **Education** – Mentoring and simplifying technical concepts.  
+### Using Netlify Forms:
+See Netlify docs: https://docs.netlify.com/forms/setup/
 
----
+## Customizations I can do next (pick one)
+- Convert the DOCX to PDF and include both versions in the repo.
+- Add a profile photo and small assets folder.
+- Replace the contact demo with a working Formspree integration and test it.
+- Convert this into a React single-file project or a two-file version with external CSS.
 
-## 🚀 Current Focus
-- Building a **personal portfolio website** with integrated photography showcase.  
-- Creating **content on Instagram & YouTube** blending cricket, data science, and photography.  
-- Exploring **consulting & freelance opportunities** in analytics and digital education.  
-
----
-
-## 🛠️ Tech & Tools
-- **Languages & Analytics:** Python, R, SQL  
-- **Visualization:** Power BI, Tableau, Matplotlib  
-- **Machine Learning:** scikit-learn, TensorFlow, PyTorch  
-- **Other Tools:** Git, GitHub, LaTeX  
-
----
-
-## 📸 Photography Portfolio
-I document the world through my lens — from serene landscapes to close-up wildlife portraits.  
-Check out my portfolio here: **[Coming Soon – Photography Website/GitHub Pages]**  
-
----
-
-## 🌐 Connect With Me
-- 🌍 Website/Portfolio: [Coming Soon]  
-- 📷 Instagram: bhanu_prakash_photography  
-- 📺 YouTube: @bhanudoppala  
-- 💼 LinkedIn: /in/bhanuprakashdoppala/ 
-- 📧 Email: bhanu.doppala@gmail.com  
-
----
-
-✨ _“At the intersection of data, creativity, and mindful living.”_  
-
+Tell me which option you'd like and I'll prepare it.
